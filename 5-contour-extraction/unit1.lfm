@@ -1,0 +1,269 @@
+object Form1: TForm1
+  Left = 501
+  Height = 392
+  Top = 363
+  Width = 1101
+  Caption = 'Robežu noteikšanas algoritms "Canny"'
+  ClientHeight = 372
+  ClientWidth = 1101
+  Menu = MainMenu1
+  LCLVersion = '1.4.4.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 300
+    Top = 24
+    Width = 300
+    BevelInner = bvLowered
+    ClientHeight = 300
+    ClientWidth = 300
+    TabOrder = 0
+    object Image1: TImage
+      Left = 2
+      Height = 296
+      Top = 2
+      Width = 296
+      Align = alClient
+      Proportional = True
+    end
+  end
+  object Panel2: TPanel
+    Left = 320
+    Height = 300
+    Top = 24
+    Width = 300
+    BevelInner = bvLowered
+    ClientHeight = 300
+    ClientWidth = 300
+    TabOrder = 1
+    object Image2: TImage
+      Left = 2
+      Height = 296
+      Top = 2
+      Width = 296
+      Align = alClient
+      Proportional = True
+    end
+  end
+  object Label1: TLabel
+    Left = 96
+    Height = 15
+    Top = 8
+    Width = 101
+    Caption = 'ORIGINAL IMAGE:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 416
+    Height = 15
+    Top = 8
+    Width = 86
+    Caption = 'RESULT IMAGE:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 640
+    Height = 372
+    Top = 0
+    Width = 461
+    Align = alRight
+    Caption = 'Tools'
+    ClientHeight = 352
+    ClientWidth = 457
+    TabOrder = 2
+    object RadioGroup1: TRadioGroup
+      Left = 8
+      Height = 57
+      Top = 0
+      Width = 176
+      AutoFill = True
+      Caption = 'Mode'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 37
+      ClientWidth = 172
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Color (RGB)'
+        'Grayscale'
+      )
+      OnClick = RadioGroup1Click
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 64
+      Width = 75
+      Caption = 'Calculate'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 15
+      Top = 96
+      Width = 53
+      Caption = 'Mask size:'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      Left = 8
+      Height = 23
+      Top = 112
+      Width = 56
+      TabOrder = 2
+      Text = '3'
+    end
+    object UpDown1: TUpDown
+      Left = 64
+      Height = 23
+      Top = 112
+      Width = 17
+      Min = 0
+      OnClick = UpDown1Click
+      Position = 0
+      TabOrder = 3
+      Wrap = False
+    end
+    object Edit2: TEdit
+      Left = 8
+      Height = 23
+      Top = 160
+      Width = 72
+      TabOrder = 4
+      Text = '0.5'
+    end
+    object Label4: TLabel
+      Left = 8
+      Height = 15
+      Top = 144
+      Width = 33
+      Caption = 'Theta:'
+      ParentColor = False
+    end
+    object TrackBar1: TTrackBar
+      Left = 8
+      Height = 25
+      Top = 184
+      Width = 76
+      Max = 45
+      OnChange = TrackBar1Change
+      Position = 0
+      TabOrder = 5
+    end
+    object Label5: TLabel
+      Left = 7
+      Height = 15
+      Top = 216
+      Width = 90
+      Caption = 'Double Treshold'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 7
+      Height = 15
+      Top = 240
+      Width = 21
+      Caption = 'Min'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 8
+      Height = 15
+      Top = 264
+      Width = 22
+      Caption = 'Max'
+      ParentColor = False
+    end
+    object Edit3: TEdit
+      Left = 40
+      Height = 23
+      Top = 240
+      Width = 40
+      TabOrder = 6
+      Text = '100'
+    end
+    object Edit4: TEdit
+      Left = 40
+      Height = 23
+      Top = 264
+      Width = 40
+      TabOrder = 7
+      Text = '200'
+    end
+    object StringGrid1: TStringGrid
+      Left = 104
+      Height = 240
+      Top = 64
+      Width = 352
+      ColCount = 3
+      FixedColor = clNone
+      FixedCols = 0
+      FixedRows = 0
+      RowCount = 3
+      TabOrder = 8
+    end
+    object Label8: TLabel
+      Left = 8
+      Height = 15
+      Top = 320
+      Width = 34
+      Caption = 'Label8'
+      ParentColor = False
+    end
+    object RadioGroup2: TRadioGroup
+      Left = 186
+      Height = 56
+      Top = 2
+      Width = 265
+      AutoFill = True
+      Caption = 'Operator'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 36
+      ClientWidth = 261
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Sobell'
+        'Roberts'
+        'Prewitt'
+        'Scharr'
+      )
+      OnClick = RadioGroup1Click
+      TabOrder = 9
+    end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 176
+    top = 24
+  end
+  object MainMenu1: TMainMenu
+    left = 56
+    top = 32
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object MenuItem2: TMenuItem
+        Caption = 'Open'
+        OnClick = MenuItem2Click
+      end
+    end
+  end
+end

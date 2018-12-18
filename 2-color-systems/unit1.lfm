@@ -1,0 +1,139 @@
+object Form1: TForm1
+  Left = -1866
+  Height = 391
+  Top = 710
+  Width = 886
+  Caption = 'RGB<->XYZ<->Lab'
+  ClientHeight = 391
+  ClientWidth = 886
+  LCLVersion = '1.4.2.0'
+  object Image1: TImage
+    Left = 8
+    Height = 370
+    Top = 8
+    Width = 530
+    OnMouseMove = Image1MouseMove
+  end
+  object Button1: TButton
+    Left = 544
+    Height = 25
+    Top = 8
+    Width = 155
+    Caption = 'Atvērt attēlu'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 704
+    Height = 105
+    Top = 8
+    Width = 113
+    AutoFill = True
+    Caption = 'Color System'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 85
+    ClientWidth = 109
+    ItemIndex = 0
+    Items.Strings = (
+      'RGB'
+      'Lab'
+    )
+    OnClick = RadioGroup1Click
+    TabOrder = 1
+  end
+  object RadioGroup2: TRadioGroup
+    Left = 704
+    Height = 144
+    Top = 136
+    Width = 113
+    AutoFill = True
+    Caption = 'Color Component'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 124
+    ClientWidth = 109
+    ItemIndex = 0
+    Items.Strings = (
+      'Composite'
+      'Red'
+      'Green'
+      'Blue'
+      'Intensity'
+    )
+    OnClick = RadioGroup2Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 544
+    Height = 25
+    Top = 40
+    Width = 155
+    Caption = 'Saglabāt attēlu'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 544
+    Height = 15
+    Top = 280
+    Width = 67
+    Caption = 'R: ?; G: ?; B: ?'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 544
+    Height = 15
+    Top = 296
+    Width = 66
+    Caption = 'X: ?; Y: ?; Z: ?'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object Label3: TLabel
+    Left = 544
+    Height = 15
+    Top = 312
+    Width = 66
+    Caption = 'L: ?; A: ?; B: ?'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object Label4: TLabel
+    Left = 544
+    Height = 15
+    Top = 328
+    Width = 67
+    Caption = 'R: ?; G: ?; B: ?'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object Label5: TLabel
+    Left = 544
+    Height = 15
+    Top = 363
+    Width = 137
+    Caption = 'Dāvis Krēgers,  121RDB768'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 608
+    top = 64
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    left = 608
+    top = 112
+  end
+end

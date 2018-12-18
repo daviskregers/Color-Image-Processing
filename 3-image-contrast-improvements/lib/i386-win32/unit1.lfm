@@ -1,0 +1,288 @@
+object Form1: TForm1
+  Left = -1016
+  Height = 460
+  Top = 89
+  Width = 918
+  Caption = 'Kontrasta uzlabošanas algoritmi'
+  ClientHeight = 440
+  ClientWidth = 918
+  Menu = MainMenu1
+  LCLVersion = '1.4.2.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 300
+    Top = 24
+    Width = 300
+    BevelInner = bvLowered
+    ClientHeight = 300
+    ClientWidth = 300
+    TabOrder = 0
+    object Image1: TImage
+      Left = 2
+      Height = 296
+      Top = 2
+      Width = 296
+      Align = alClient
+      Proportional = True
+    end
+  end
+  object Panel2: TPanel
+    Left = 320
+    Height = 300
+    Top = 24
+    Width = 300
+    BevelInner = bvLowered
+    ClientHeight = 300
+    ClientWidth = 300
+    TabOrder = 1
+    object Image2: TImage
+      Left = 2
+      Height = 296
+      Top = 2
+      Width = 296
+      Align = alClient
+      Proportional = True
+    end
+  end
+  object Panel3: TPanel
+    Left = 24
+    Height = 102
+    Top = 328
+    Width = 258
+    ClientHeight = 102
+    ClientWidth = 258
+    TabOrder = 2
+    object Image3: TImage
+      Left = 1
+      Height = 100
+      Top = 1
+      Width = 256
+      Align = alClient
+    end
+  end
+  object Panel4: TPanel
+    Left = 336
+    Height = 102
+    Top = 328
+    Width = 258
+    ClientHeight = 102
+    ClientWidth = 258
+    TabOrder = 3
+    object Image4: TImage
+      Left = 1
+      Height = 100
+      Top = 1
+      Width = 256
+      Align = alClient
+    end
+  end
+  object Label1: TLabel
+    Left = 96
+    Height = 15
+    Top = 8
+    Width = 101
+    Caption = 'ORIGINAL IMAGE:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 416
+    Height = 15
+    Top = 8
+    Width = 86
+    Caption = 'RESULT IMAGE:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 622
+    Height = 440
+    Top = 0
+    Width = 296
+    Align = alRight
+    Caption = 'Tools'
+    ClientHeight = 420
+    ClientWidth = 292
+    TabOrder = 4
+    object RadioGroup1: TRadioGroup
+      Left = 8
+      Height = 57
+      Top = 0
+      Width = 280
+      AutoFill = True
+      Caption = 'Mode'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 37
+      ClientWidth = 276
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Color (RGB)'
+        'Grayscale'
+      )
+      OnClick = RadioGroup1Click
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 88
+      Height = 25
+      Top = 72
+      Width = 123
+      Caption = 'Gamma Correction'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object TrackBar1: TTrackBar
+      Left = 0
+      Height = 25
+      Top = 96
+      Width = 288
+      Max = 100
+      OnChange = TrackBar1Change
+      Position = 0
+      TabOrder = 2
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 15
+      Top = 133
+      Width = 6
+      Caption = '0'
+      ParentColor = False
+      OnClick = Label3Click
+    end
+    object Label4: TLabel
+      Left = 271
+      Height = 15
+      Top = 133
+      Width = 6
+      Caption = '5'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 120
+      Height = 15
+      Top = 133
+      Width = 43
+      Caption = 'Gamma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Label6: TLabel
+    Left = 744
+    Height = 15
+    Top = 245
+    Width = 50
+    Caption = 'Log scale'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 895
+    Height = 15
+    Top = 245
+    Width = 6
+    Caption = '5'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 632
+    Height = 15
+    Top = 245
+    Width = 6
+    Caption = '0'
+    ParentColor = False
+    OnClick = Label3Click
+  end
+  object TrackBar2: TTrackBar
+    Left = 624
+    Height = 25
+    Top = 208
+    Width = 288
+    Max = 100
+    OnChange = TrackBar2Change
+    Position = 0
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 712
+    Height = 25
+    Top = 184
+    Width = 123
+    Caption = 'Logarithmic Scaling'
+    OnClick = Button2Click
+    TabOrder = 6
+  end
+  object Label9: TLabel
+    Left = 744
+    Height = 15
+    Top = 349
+    Width = 50
+    Caption = 'Exp scale'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 895
+    Height = 15
+    Top = 349
+    Width = 6
+    Caption = '5'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 632
+    Height = 15
+    Top = 349
+    Width = 6
+    Caption = '0'
+    ParentColor = False
+    OnClick = Label3Click
+  end
+  object TrackBar3: TTrackBar
+    Left = 624
+    Height = 25
+    Top = 312
+    Width = 288
+    Max = 100
+    OnChange = TrackBar3Change
+    Position = 0
+    TabOrder = 7
+  end
+  object Button3: TButton
+    Left = 688
+    Height = 25
+    Top = 288
+    Width = 171
+    Caption = 'Exponential Transformation'
+    OnClick = Button3Click
+    TabOrder = 8
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 176
+    top = 24
+  end
+  object MainMenu1: TMainMenu
+    left = 296
+    top = 344
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object MenuItem2: TMenuItem
+        Caption = 'Open'
+        OnClick = MenuItem2Click
+      end
+    end
+  end
+end

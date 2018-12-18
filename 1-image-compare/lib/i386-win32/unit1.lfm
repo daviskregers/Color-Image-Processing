@@ -1,0 +1,178 @@
+object Form1: TForm1
+  Left = 400
+  Height = 613
+  Top = 129
+  Width = 537
+  Caption = 'Attēlu kvalitatīvā salīdzināšana'
+  ClientHeight = 613
+  ClientWidth = 537
+  OnCreate = FormCreate
+  LCLVersion = '1.4.2.0'
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 155
+    Caption = 'Atvērt attēlu nr. 1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 8
+    Height = 25
+    Top = 32
+    Width = 155
+    Caption = 'Atvērt attēlu nr. 2'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 8
+    Height = 256
+    Top = 64
+    Width = 256
+    BevelInner = bvLowered
+    ClientHeight = 256
+    ClientWidth = 256
+    TabOrder = 2
+    object Image1: TImage
+      Left = 2
+      Height = 252
+      Top = 2
+      Width = 252
+      Align = alClient
+      OnMouseDown = Image1MouseDown
+      OnMouseMove = Image1MouseMove
+      OnMouseUp = Image1MouseUp
+      Proportional = True
+    end
+  end
+  object Panel2: TPanel
+    Left = 8
+    Height = 256
+    Top = 328
+    Width = 256
+    BevelInner = bvLowered
+    ClientHeight = 256
+    ClientWidth = 256
+    TabOrder = 3
+    object Image2: TImage
+      Left = 2
+      Height = 252
+      Top = 2
+      Width = 252
+      Align = alClient
+      OnMouseDown = Image2MouseDown
+      OnMouseMove = Image2MouseMove
+      OnMouseUp = Image2MouseUp
+      Proportional = True
+    end
+  end
+  object Button3: TButton
+    Left = 167
+    Height = 48
+    Top = 8
+    Width = 97
+    Caption = 'Salīdzināt attēlus'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Panel3: TPanel
+    Left = 272
+    Height = 256
+    Top = 64
+    Width = 256
+    ClientHeight = 256
+    ClientWidth = 256
+    TabOrder = 5
+    object Image3: TImage
+      Left = 1
+      Height = 254
+      Top = 1
+      Width = 254
+      Align = alClient
+      OnMouseMove = Image3MouseMove
+      Proportional = True
+    end
+  end
+  object Label1: TLabel
+    Left = 272
+    Height = 15
+    Top = 329
+    Width = 225
+    Caption = 'Rezultāti pārklāšanās zonā (pa pikseļiem)'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 271
+    Height = 15
+    Top = 352
+    Width = 92
+    Caption = 'X, Y = (?, ?); E = ?;'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 271
+    Height = 15
+    Top = 376
+    Width = 97
+    Caption = 'Kopējies rezultāti'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 272
+    Height = 15
+    Top = 398
+    Width = 132
+    Caption = 'Vidējā kvadrātiskā kļūda: '
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 272
+    Height = 15
+    Top = 422
+    Width = 92
+    Caption = 'Maksimālā kļūda:'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 392
+    Height = 15
+    Top = 588
+    Width = 134
+    Caption = 'Dāvis Krēgers, 121RDB768'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 408
+    Height = 15
+    Top = 398
+    Width = 3
+    Caption = '.'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 379
+    Height = 15
+    Top = 422
+    Width = 3
+    Caption = '.'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 273
+    Height = 1
+    Top = 460
+    Width = 1
+    ParentColor = False
+    WordWrap = True
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 384
+    top = 16
+  end
+end

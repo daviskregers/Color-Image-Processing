@@ -1,0 +1,16 @@
+object Form2: TForm2
+  Left = 604
+  Height = 578
+  Top = 207
+  Width = 765
+  Caption = 'Form2'
+  ClientHeight = 578
+  ClientWidth = 765
+  LCLVersion = '1.2.6.0'
+  object Image1: TImage
+    Left = 8
+    Height = 562
+    Top = 8
+    Width = 746
+  end
+end
